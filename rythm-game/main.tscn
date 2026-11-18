@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c51s4cdxbx35p"]
+
+[ext_resource type="Script" uid="uid://dnw6dkw08sw3w" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c3y43qvtctend" path="res://Down1.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://clnqjgvjx7d7b" path="res://Up2.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://hmd5waw4shif" path="res://Left3.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://clvlffhlomtpr" path="res://Right4.tscn" id="5_7mycd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1170, 69)
+
+[node name="Main" type="Node2D" unique_id=381773178]
+script = ExtResource("1_ig7tw")
+
+[node name="Detector" type="Node2D" parent="." unique_id=1295504535]
+
+[node name="Area2D" type="Area2D" parent="Detector" unique_id=1029241159]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector/Area2D" unique_id=1232461974]
+position = Vector2(589, 612)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Arrow(Clicker)" parent="." unique_id=632823950 instance=ExtResource("2_0xm2m")]
+position = Vector2(264, 583)
+
+[node name="Arrow(Clicker)2" parent="." unique_id=1675556846 instance=ExtResource("3_h2yge")]
+position = Vector2(390, 587)
+
+[node name="Arrow(Clicker)3" parent="." unique_id=1632514949 instance=ExtResource("4_lquwl")]
+position = Vector2(539, 582)
+
+[node name="Arrow(Clicker)4" parent="." unique_id=1140728710 instance=ExtResource("5_7mycd")]
+position = Vector2(689, 590)

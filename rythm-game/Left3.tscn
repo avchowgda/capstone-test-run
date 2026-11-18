@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hmd5waw4shif"]
+
+[ext_resource type="PackedScene" uid="uid://b5g3doxeepkya" path="res://Parrent_Arrow(clicker).tscn" id="1_oi7xg"]
+[ext_resource type="Texture2D" uid="uid://ctdarqxixocm6" path="res://2x/arrowLeft.png" id="2_oi7xg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lx55q"]
+radius = 39.0
+
+[node name="Arrow(Clicker)" unique_id=632823950 instance=ExtResource("1_oi7xg")]
+
+[node name="ArrowDown" parent="." index="0" unique_id=2135579936]
+texture = ExtResource("2_oi7xg")
+
+[node name="Left" type="Area2D" parent="." index="1" unique_id=263058335]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left" index="0" unique_id=47748683]
+shape = SubResource("CircleShape2D_lx55q")
