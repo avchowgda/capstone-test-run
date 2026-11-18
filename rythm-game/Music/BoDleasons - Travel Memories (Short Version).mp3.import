@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://80rq0wxbvbt5"
+path="res://.godot/imported/BoDleasons - Travel Memories (Short Version).mp3-0234200be137b8e6af41f6cd6794b4d0.mp3str"
+
+[deps]
+
+source_file="res://Music/BoDleasons - Travel Memories (Short Version).mp3"
+dest_files=["res://.godot/imported/BoDleasons - Travel Memories (Short Version).mp3-0234200be137b8e6af41f6cd6794b4d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

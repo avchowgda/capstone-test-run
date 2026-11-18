@@ -13,7 +13,6 @@ config_version=5
 config/name="Rythm game"
 run/main_scene="uid://c51s4cdxbx35p"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 

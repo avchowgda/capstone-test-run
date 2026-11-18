@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4drgy4gh2n3y"
+path="res://.godot/imported/Mr Smith - Cool J.mp3-8307ee31fa82bf7d90d377088e322b0b.mp3str"
+
+[deps]
+
+source_file="res://Music/Mr Smith - Cool J.mp3"
+dest_files=["res://.godot/imported/Mr Smith - Cool J.mp3-8307ee31fa82bf7d90d377088e322b0b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
