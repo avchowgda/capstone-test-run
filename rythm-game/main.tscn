@@ -1,13 +1,95 @@
 [gd_scene format=3 uid="uid://c51s4cdxbx35p"]
 
 [ext_resource type="Script" uid="uid://dnw6dkw08sw3w" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://c3y43qvtctend" path="res://Down1.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://clnqjgvjx7d7b" path="res://Up2.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://hmd5waw4shif" path="res://Left3.tscn" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://clvlffhlomtpr" path="res://Right4.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cbr1eeta3p26r" path="res://arrow_generator.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://btlbxj6vw8oal" path="res://arrow_generator_right.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://c1ve1kd21d414" path="res://arrow_generator_left.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://u0kxwyfp3qyr" path="res://arrow_generator_up.tscn" id="5_272bh"]
+[ext_resource type="AudioStream" uid="uid://4drgy4gh2n3y" path="res://Music/Mr Smith - Cool J.mp3" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1170, 69)
+
+[sub_resource type="Animation" id="Animation_272bh"]
+resource_name = "Mr smith song"
+length = 117.0
+loop_mode = 2
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_7mycd")
+}],
+"times": PackedFloat32Array(0.26666668)
+}
+tracks/0/use_blend = true
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArrowGenerator")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArrowGeneratorRight")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.26666668),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ArrowGeneratorLeft")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArrowGeneratorUp")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_arrow"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
+_data = {
+&"Mr smith song": SubResource("Animation_272bh")
+}
 
 [node name="Main" type="Node2D" unique_id=381773178]
 script = ExtResource("1_ig7tw")
@@ -20,14 +102,20 @@ script = ExtResource("1_ig7tw")
 position = Vector2(589, 612)
 shape = SubResource("RectangleShape2D_0xm2m")
 
-[node name="Arrow(Clicker)" parent="." unique_id=632823950 instance=ExtResource("2_0xm2m")]
-position = Vector2(264, 583)
+[node name="ArrowGenerator" parent="." unique_id=801273691 instance=ExtResource("2_0xm2m")]
+position = Vector2(68, 2)
 
-[node name="Arrow(Clicker)2" parent="." unique_id=1675556846 instance=ExtResource("3_h2yge")]
-position = Vector2(390, 587)
+[node name="ArrowGeneratorRight" parent="." unique_id=61200260 instance=ExtResource("3_lquwl")]
+position = Vector2(155, 1)
 
-[node name="Arrow(Clicker)3" parent="." unique_id=1632514949 instance=ExtResource("4_lquwl")]
-position = Vector2(539, 582)
+[node name="ArrowGeneratorLeft" parent="." unique_id=790667679 instance=ExtResource("4_7mycd")]
+position = Vector2(194, 2)
 
-[node name="Arrow(Clicker)4" parent="." unique_id=1140728710 instance=ExtResource("5_7mycd")]
-position = Vector2(689, 590)
+[node name="ArrowGeneratorUp" parent="." unique_id=1242904232 instance=ExtResource("5_272bh")]
+position = Vector2(111, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=488850050]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1095798102]
+libraries/ = SubResource("AnimationLibrary_5vw27")
+autoplay = &"Mr smith song"

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cbr1eeta3p26r"]
+
+[ext_resource type="Script" uid="uid://dcntrub7cw7qd" path="res://arrow_generator.gd" id="1_02s8a"]
+[ext_resource type="PackedScene" uid="uid://c3y43qvtctend" path="res://Down1.tscn" id="2_aamxn"]
+
+[node name="ArrowGenerator" type="Node2D" unique_id=801273691]
+script = ExtResource("1_02s8a")
+scene_to_instance = ExtResource("2_aamxn")

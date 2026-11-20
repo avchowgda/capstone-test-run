@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c1ve1kd21d414"]
+
+[ext_resource type="PackedScene" uid="uid://cbr1eeta3p26r" path="res://arrow_generator.tscn" id="1_rwa3m"]
+[ext_resource type="PackedScene" uid="uid://hmd5waw4shif" path="res://Left3.tscn" id="2_6bf0u"]
+
+[node name="ArrowGeneratorLeft" unique_id=801273691 instance=ExtResource("1_rwa3m")]
+scene_to_instance = ExtResource("2_6bf0u")

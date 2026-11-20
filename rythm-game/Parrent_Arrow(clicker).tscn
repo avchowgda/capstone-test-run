@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b5g3doxeepkya"]
 
+[ext_resource type="Script" uid="uid://ch88sa7pg0aks" path="res://parrent_arrow(clicker).gd" id="1_7ku87"]
 [ext_resource type="Texture2D" uid="uid://np8e5n3xeu1i" path="res://2x/arrowDown.png" id="1_gtdsg"]
 
 [node name="ParrentArrow(Clicker)" type="Node2D" unique_id=632823950]
+script = ExtResource("1_7ku87")
 
 [node name="ArrowDown" type="Sprite2D" parent="." unique_id=2135579936]
 texture = ExtResource("1_gtdsg")
